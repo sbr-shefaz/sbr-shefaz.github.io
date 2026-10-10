@@ -1,0 +1,18 @@
+{
+  "name": "Portfolio development",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "Portfolio preview",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "git --version && gh --version && python3 --version && node --version && node --check script.js && python3 scripts/check_site.py",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
